@@ -58,7 +58,7 @@ class PaginationMerge
             return $paginator->items();
         }, $paginators);
 
-        $items = Arr::flatten($items);
+        $items = Arr::collapse($items);
 
         $items = Collection::make($items);
 
